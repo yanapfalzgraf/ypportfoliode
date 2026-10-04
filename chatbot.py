@@ -32,7 +32,8 @@ def create_chat_response(question: str) -> str:
     """Creates controlled responses about the portfolio."""
     normalized = " ".join(question.lower().split())
 
-    if any(term in normalized for term in ("hallo", "hello", "hi", "guten tag", "hey")):
+    if any(term in normalized for term in (
+        "hallo", "hello", "hi", "guten tag", "hey")):
         return (
             "Hello! Great to have you here. "
             "Ask me about Yana’s experience, selected projects, digital product development, "
@@ -98,9 +99,9 @@ def create_chat_response(question: str) -> str:
             "with engineering to continuously improve the product."
         )
 
-        if any(term in normalized for term in (
-        "kontakt", "contact", "email", "e-mail",
-        "erreichen", "nachricht", "message", "reach"
+    if any(term in normalized for term in (
+    "kontakt", "contact", "email", "e-mail",
+    "erreichen", "nachricht", "message", "reach"
     )):
         return (
             "Please use the 'Get in touch' button in the contact section. "
@@ -120,8 +121,11 @@ def create_chat_response(question: str) -> str:
 
 
 def _required_secret(name: str) -> str:
+    value = st.secrets.get(name)
+
     if value is None or str(value).strip() == "":
         raise KeyError(name)
+
     return str(value).strip()
 
 
