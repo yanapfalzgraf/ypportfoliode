@@ -98,7 +98,7 @@ def create_chat_response(question: str) -> str:
             "with engineering to continuously improve the product."
         )
 
-    if any(term in normalized for term in (
+        if any(term in normalized for term in (
         "kontakt", "contact", "email", "e-mail",
         "erreichen", "nachricht", "message", "reach"
     )):
@@ -107,20 +107,19 @@ def create_chat_response(question: str) -> str:
             "You can send Yana a direct message through the contact form."
         )
 
-if any(term in normalized for term in (
-    "standort", "ort", "location", "based", "gaildorf"
-)):
+    if any(term in normalized for term in (
+        "standort", "ort", "location", "based", "gaildorf"
+    )):
         return "Yana is based in Gaildorf, Germany."
 
-        return (
-            "I don’t currently have a specific portfolio answer for that. "
-            "Try asking me about Yana’s experience, selected projects, digital product development, "
-            "business analysis, product ownership, data analytics, or how to get in touch."
-        )
+    return (
+        "I don’t currently have a specific portfolio answer for that. "
+        "Try asking me about Yana’s experience, selected projects, digital product development, "
+        "business analysis, product ownership, data analytics, or how to get in touch."
+    )
 
 
 def _required_secret(name: str) -> str:
-    value = st.secrets.get(name)
     if value is None or str(value).strip() == "":
         raise KeyError(name)
     return str(value).strip()
