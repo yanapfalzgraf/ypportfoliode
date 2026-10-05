@@ -11,9 +11,9 @@ import streamlit as st
 
 
 _INITIAL_MESSAGE = (
-    "Hello! I’m Yana’s portfolio assistant. "
-    "I can answer questions about her projects, experience, "
-    "skills and approach to product design."
+    "Hallo! Ich bin Yanas Portfolio-Assistent. "
+    "Ich beantworte Fragen zu ihren Projekten, ihrer Erfahrung, "
+    "ihren Kompetenzen und ihrer Arbeitsweise."
 )
 
 _EMAIL_PATTERN = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
@@ -35,17 +35,17 @@ def create_chat_response(question: str) -> str:
     if any(term in normalized for term in (
         "hallo", "hello", "hi", "guten tag", "hey")):
         return (
-            "Hello! Great to have you here. "
-            "Ask me about Yana’s experience, selected projects, digital product development, "
-            "business analysis, product ownership, data analytics, or how to get in touch."
+            "Hallo! Schön, dass du hier bist. "
+            "Frag mich gerne nach Yanas Erfahrung, ausgewählten Projekten, digitaler Produktentwicklung, "
+            "Business Analyse, Product Ownership, Data Analytics oder Kontaktmöglichkeiten."
         )
 
     if any(term in normalized for term in ("projekt", "projekte", "project", "projects", "portfolio")):
         return (
-            "Yana’s portfolio reflects more than 10 years of experience in digital product development, "
-            "combining UX and product design with business requirements, stakeholder collaboration and technology. "
-            "Her work includes projects for Murrelektronik, OPTIMA, MeaPuna and Mercedes-Benz, "
-            "complemented by Data Analytics projects using Power BI, Python and Streamlit."
+            "Yanas Portfolio zeigt über 10 Jahre Erfahrung in der digitalen Produktentwicklung "
+            "und verbindet UX und Product Design mit Geschäftsanforderungen, Stakeholder Management und Technologie. "
+            "Ihre Projekterfahrung umfasst unter anderem Murrelektronik, OPTIMA, MeaPuna und Mercedes-Benz "
+            "sowie Data-Analytics-Projekte mit Power BI, Python und Streamlit."
         )
 
     if any(term in normalized for term in (
@@ -54,11 +54,11 @@ def create_chat_response(question: str) -> str:
         "business analysis", "ux", "ui"
     )):
         return (
-            "Yana brings more than 10 years of experience in digital product development, "
-            "with a strong background in UX, product design and complex B2B and enterprise software. "
-            "She combines user and business needs, requirements analysis, stakeholder collaboration "
-            "and technical understanding with a growing focus on Product Ownership, Business Analysis "
-            "and data-informed product development."
+            "Yana bringt über 10 Jahre Erfahrung in der digitalen Produktentwicklung mit, "
+            "mit einem starken Hintergrund in UX, Product Design sowie komplexer B2B- und Enterprise-Software. "
+            "Sie verbindet Nutzer- und Geschäftsbedürfnisse, Anforderungsanalyse, Stakeholder Management "
+            "und technisches Verständnis mit einem Fokus auf Product Ownership, Business Analyse "
+            "und datenbasierte Produktentwicklung."
         )
 
     if any(
@@ -79,11 +79,11 @@ def create_chat_response(question: str) -> str:
         )
     ):
         return (
-        "Yana’s core competencies include digital product development, business analysis, "
-        "requirements analysis, stakeholder management, product discovery, agile product development, "
-        "user and customer insights, product analytics and data-informed decision making. "
-        "Her additional skills include UX and interaction design, prototyping and validation, "
-        "Power BI, SQL, Python and data visualization."
+            "Yanas Kernkompetenzen umfassen digitale Produktentwicklung, Business Analyse, "
+            "Anforderungsanalyse, Stakeholder Management, Product Discovery, agile Produktentwicklung, "
+            "User & Customer Insights, Product Analytics und datenbasierte Entscheidungsfindung. "
+            "Weitere Kompetenzen sind UX & Interaction Design, Prototyping & Validierung, "
+            "Power BI, SQL, Python und Datenvisualisierung."
 )
 
     if any(term in normalized for term in (
@@ -91,12 +91,11 @@ def create_chat_response(question: str) -> str:
         "approach", "process", "workflow"
     )):
         return (
-            "Yana’s approach connects Product, Business and Data. "
-            "She starts by understanding user needs, stakeholder perspectives and business goals, "
-            "then structures requirements, workflows and available data. "
-            "She translates insights into product concepts and actionable requirements, "
-            "validates assumptions with users, stakeholders and data, and collaborates "
-            "with engineering to continuously improve the product."
+            "Yanas Arbeitsweise verbindet Produkt, Business und Daten. "
+            "Sie beginnt mit dem Verständnis von Nutzerbedürfnissen, Stakeholder-Perspektiven und Geschäftszielen, "
+            "strukturiert anschließend Anforderungen, Prozesse und verfügbare Daten und übersetzt Erkenntnisse "
+            "in Produktkonzepte und konkrete Anforderungen. Annahmen werden mit Nutzern, Stakeholdern und Daten "
+            "validiert und Produkte gemeinsam mit Entwicklungsteams kontinuierlich verbessert."
         )
 
     if any(term in normalized for term in (
@@ -104,19 +103,19 @@ def create_chat_response(question: str) -> str:
     "erreichen", "nachricht", "message", "reach"
     )):
         return (
-            "Please use the 'Get in touch' button in the contact section. "
-            "You can send Yana a direct message through the contact form."
+            "Nutze den Button „Kontakt aufnehmen“ im Kontaktbereich. "
+            "Über das Kontaktformular kannst du Yana direkt eine Nachricht senden."
         )
 
     if any(term in normalized for term in (
         "standort", "ort", "location", "based", "gaildorf"
     )):
-        return "Yana is based in Gaildorf, Germany."
+        return "Yana lebt in Gaildorf, Deutschland."
 
     return (
-        "I don’t currently have a specific portfolio answer for that. "
-        "Try asking me about Yana’s experience, selected projects, digital product development, "
-        "business analysis, product ownership, data analytics, or how to get in touch."
+         "Dazu habe ich aktuell keine spezifische Information im Portfolio. "
+         "Frag mich gerne nach Yanas Erfahrung, Projekten, digitaler Produktentwicklung, "
+         "Business Analyse, Product Ownership, Data Analytics oder Kontaktmöglichkeiten."
     )
 
 
@@ -228,40 +227,41 @@ def _portrait_header(
     )
 
 
-@st.dialog("Contact Yana", width="small")
+@st.dialog("Yana kontaktieren", width="small")
 def contact_form_dialog(portrait_data_url: str | None = None) -> None:
     """Displays the contact form."""
     init_chat_state()
     _portrait_header(
         portrait_data_url=portrait_data_url,
-        subtitle="Send a direct message",
+        subtitle="Direkte Nachricht senden",
     )
 
-    st.markdown("### Send me a message")
+    st.markdown("### Nachricht senden")
     st.caption(
-        "Required fields are marked with *. Your information will only be used "
-        "to process your contact request."
+        "Pflichtfelder sind mit * gekennzeichnet. Deine Angaben werden ausschließlich "
+        "zur Bearbeitung deiner Kontaktanfrage verwendet."
     )
 
     with st.form("portfolio_contact_form", clear_on_submit=False):
         name = st.text_input("Name *", max_chars=100)
-        sender_email = st.text_input("Email address *", max_chars=180)
-        company = st.text_input("Company", max_chars=140)
+        sender_email = st.text_input("E-Mail -Adresse *", max_chars=180)
+        company = st.text_input("Unternehmen", max_chars=140)
         message = st.text_area(
-            "Message *",
+            "Nachricht *",
             height=150,
             max_chars=3000,
             placeholder=(
-                "Tell me briefly about the opportunity, project or topic you'd like to discuss... "
+                "Erzähle mir kurz von der Position, dem Projekt oder Thema, "
+                "über das du sprechen möchtest..."
             ),
         )
         privacy_accepted = st.checkbox(
-            "I consent to the processing of the information I provide "
-            "for the purpose of handling this contact request. *"
+               "Ich stimme der Verarbeitung meiner Angaben zur Bearbeitung "
+                "dieser Kontaktanfrage zu. *"
         )
 
         submitted = st.form_submit_button(
-            "Send message →",
+            "Nachricht senden →",
             type="primary",
             use_container_width=True,
         )
@@ -273,15 +273,15 @@ def contact_form_dialog(portrait_data_url: str | None = None) -> None:
         clean_message = message.strip()
 
         if len(clean_name) < 2:
-            st.error("Please enter your name.")
+            st.error("Bitte gib deinen Namen ein.")
         elif not _EMAIL_PATTERN.match(clean_email):
-            st.error("Please enter a valid email address.")
+            st.error("Bitte gib eine gültige E-Mail-Adresse ein.")
         elif len(clean_message) < 10:
-            st.error("Please enter a slightly more detailed message.")
+            st.error("Bitte gib eine etwas ausführlichere Nachricht ein.")
         elif not privacy_accepted:
-            st.error("Please confirm that your information may be processed for this request.")
+            st.error("Bitte bestätige, dass deine Angaben für diese Anfrage verarbeitet werden dürfen.")
         else:
-            with st.spinner("Sending message …"):
+            with st.spinner("Nachricht wird gesendet …"):
                 success, feedback = send_contact_email(
                     name=clean_name,
                     sender_email=clean_email,
@@ -298,7 +298,7 @@ def contact_form_dialog(portrait_data_url: str | None = None) -> None:
     st.divider()
 
     if st.button(
-        "Close",
+        "Schließen",
         key="close_contact_form",
         use_container_width=True,
     ):
@@ -307,7 +307,7 @@ def contact_form_dialog(portrait_data_url: str | None = None) -> None:
 
     st.html(
         '<p class="portfolio-chat-note">'
-        "The form only sends the information you explicitly submit."
+        "Das Formular übermittelt nur die Informationen, die du ausdrücklich absendest."
         "</p>"
     )
 
@@ -317,13 +317,13 @@ def render_floating_chat(portrait_data_url: str | None = None) -> None:
     init_chat_state()
 
     with st.popover(
-        "💬 Questions about Yana’s portfolio?",
+        "💬 Fragen zu Yanas Portfolio?",
         key="floating_portfolio_chat",
-        help="Open portfolio assistant",
+        help="Portfolio-Assistent öffnen",
     ):
         _portrait_header(
             portrait_data_url=portrait_data_url,
-            subtitle="Portfolio assistant · available now",
+            subtitle="Portfolio-Assistant · verfügbar",
         )
 
         history = st.container(height=300)
@@ -333,7 +333,7 @@ def render_floating_chat(portrait_data_url: str | None = None) -> None:
                     st.write(message["content"])
 
         prompt = st.chat_input(
-            "Ask a question about the portfolio …",
+            "Stelle eine Frage zum Portfolio …",
             key="floating_portfolio_chat_input",
         )
 
@@ -347,7 +347,7 @@ def render_floating_chat(portrait_data_url: str | None = None) -> None:
             st.rerun()
 
         if st.button(
-            "Restart chat",
+            "Chat neu starten",
             key="reset_floating_portfolio_chat",
             use_container_width=True,
         ):
@@ -358,6 +358,6 @@ def render_floating_chat(portrait_data_url: str | None = None) -> None:
 
         st.html(
             '<p class="portfolio-chat-note">'
-            "This assistant answers questions based on the content of this portfolio."
+            "Dieser Assistent beantwortet Fragen auf Grundlage der Inhalte dieses Portfolios."
             "</p>"
         )

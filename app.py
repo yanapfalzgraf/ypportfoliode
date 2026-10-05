@@ -359,7 +359,7 @@ PROJECTS_UX = [
         "image": "assets/images/murrelektronik.svg",
         "card_image": "assets/images/Murrelektronik.svg",
         "cover_image": "assets/images/Murrelektronik.svg",
-        "description": "Designed a user-centered experience for a digital installation platform that guides employees visually and interactively through complex wiring workflows.",
+        "description": "Entwicklung einer nutzerzentrierten Lösung für eine digitale Installationsplattform, die Mitarbeitende visuell und interaktiv durch komplexe Verdrahtungsprozesse führt.",
         "tags": ["UX Research", "UI Design", "Figma", "Prototyping"],
 
         "gallery": [
@@ -375,7 +375,7 @@ PROJECTS_UX = [
         "image": "assets/images/optima.svg",
         "card_image": "assets/images/optima.svg",
         "cover_image": "assets/images/optima.svg",
-        "description": "Designed end-to-end UX/UI solutions for industrial software workflows, from early product concepts and interaction models to intuitive, implementation-ready interfaces.",
+        "description": "Entwicklung ganzheitlicher UX/UI-Lösungen für industrielle Softwareprozesse – von ersten Produktkonzepten und Interaktionsmodellen bis hin zu intuitiven, umsetzungsreifen Benutzeroberflächen.",
         "tags": ["User Flows", "Sketch", "Adobe XD", "Design System"],
 
         "gallery": [
@@ -391,7 +391,7 @@ PROJECTS_UX = [
         "image": "assets/images/meapuna.svg",
         "card_image": "assets/images/meapuna.svg",
         "cover_image": "assets/images/meapuna.svg",
-        "description": "Owned UX/UI design and SAPUI5 frontend implementation across two software products, bridging product thinking, interaction design and technical delivery from concept to production.",
+        "description": "Verantwortung für UX/UI Design und SAPUI5-Frontend-Entwicklung für zwei Softwareprodukte – von Produktkonzeption und Interaction Design bis zur technischen Umsetzung.",
         "tags": ["SAP UI5 Programming","SAP Fiori Apps Reference Library", "Wireframes", "Usability"],
 
         "gallery": [
@@ -407,7 +407,7 @@ PROJECTS_UX = [
         "image": "assets/images/mercedes.svg",
         "card_image": "assets/images/cinteo.svg",
         "cover_image": "assets/images/cinteo.svg",
-        "description": "Created user-centered product concepts for digital automotive commerce experiences, translating business requirements into intuitive customer journeys and interaction patterns.",
+        "description": "Entwicklung nutzerzentrierter Produktkonzepte für digitale Automotive-Commerce-Lösungen – von Geschäftsanforderungen bis hin zu intuitiven Customer Journeys und Interaktionskonzepten.",
         "tags": ["Interaction Design", "Axure", "Automotive", "UI"],
 
         "gallery": [
@@ -421,13 +421,13 @@ PROJECTS_UX = [
 
 PROJECTS_DATA = [
     {
-        "title": "Project 01 · AutoScout24",
+        "title": "Projekt 01 · AutoScout24",
         "subtitle": "Data Analytics · Power BI · DAX · Python",
         "image": "assets/images/data_prediction.svg",
         "card_image": "assets/images/dsi1.svg",
         "cover_image": "assets/images/dsi1.svg",
         "description": (
-           "Data product case study using the AutoScout24 dataset: used-car market analysis, pricing patterns, brand and model comparison, interactive filters and KPIs, DAX measures, Power Query and a star schema — with a strong focus on clear decision-oriented dashboard UX."
+           "Datenanalyse des Gebrauchtwagenmarkts auf Basis des AutoScout24-Datensatzes – mit Preisanalysen, Marken- und Modellvergleichen, interaktiven Filtern und KPIs, DAX Measures, Power Query und einem Star Schema. Der Fokus liegt auf einem klaren, entscheidungsorientierten Dashboard."
         ),
         "tags": [
             "Power BI",
@@ -449,12 +449,12 @@ PROJECTS_DATA = [
         ],
     },
     {
-        "title": "Project 02 · PlatePilot Navigator",
+        "title": "Projekt 02 · PlatePilot Navigator",
         "subtitle": "Recommendation Product · Scoring Model · Streamlit · Python",
         "image": "assets/images/data_forecasting.svg",
         "card_image": "assets/images/platepilot_navigator_cover.svg",
         "cover_image": "assets/images/platepilot_navigator_cover.svg",
-        "description": "Designed and built a restaurant recommendation product with personalized filters, a weighted scoring model, map integration, location-based discovery and interactive data visualization — combining UX thinking, product logic and Python implementation.",
+        "description": "Konzeption und Entwicklung eines Restaurant-Empfehlungssystems mit personalisierten Filtern, gewichtetem Scoring-Modell, Kartenintegration, standortbasierter Suche und interaktiven Datenvisualisierungen – eine Verbindung aus UX, Produktlogik und Python-Entwicklung.",
         "demo_url": "https://platpilotnavigatorapp.streamlit.app/",
         "tags": ["Python", "Streamlit", "Pandas", "Scikit-learn", "NumPy", "Folium", "GeoPy", "Parquet"],
 
@@ -464,13 +464,12 @@ PROJECTS_DATA = [
         ],
     },
     {
-        "title": "Project 03 · Olympic Games",
+        "title": "Projekt 03 · Olimpische Spiele",
         "subtitle": "Data Analytics · Power BI · DAX · Python",
         "image": "assets/images/olympic_dashboard.svg",
         "card_image": "assets/images/olympic_dashboard.svg",
         "cover_image": "assets/images/olympic_dashboard.svg",
-        "description": (
-    "Interactive analytics case study built around Olympic Games data, including a star schema, DAX measures, participation trends, country dominance, gender representation and historical developments — translated into an accessible dashboard experience."
+        "description": ("Interaktive Datenanalyse der Olympischen Spiele mit Star Schema, DAX Measures sowie Analysen zu Teilnehmerentwicklung, Länderperformance, Geschlechterverteilung und historischen Entwicklungen – aufbereitet in einem übersichtlichen Dashboard."
 ),
         "tags": ["Power BI", "Data Visualization", "DAX", "Power Query"],
 
@@ -504,7 +503,7 @@ if "active_project_index" not in st.session_state:
     st.session_state["active_project_index"] = None
 
 
-@st.dialog("Project", width="large")
+@st.dialog("Projekt", width="large")
 def project_dialog(project: dict) -> None:
     project_index = next(
         (
@@ -562,7 +561,7 @@ def project_dialog(project: dict) -> None:
 
         with image_prev:
             if st.button(
-                "← Previous image",
+                "← Vorheriges Bild",
                 key=f"previous_image_{project_key}",
                 use_container_width=True,
             ):
@@ -582,7 +581,7 @@ def project_dialog(project: dict) -> None:
 
         with image_next:
             if st.button(
-                "Next image →",
+                "Weiteres Bild →",
                 key=f"next_image_{project_key}",
                 use_container_width=True,
             ):
@@ -615,12 +614,12 @@ def project_dialog(project: dict) -> None:
         f"""
         <div class="case-description-grid">
             <section>
-                <h4>About the project</h4>
+                <h4>Über das Projekt</h4>
                 <p>{html.escape(project["description"])}</p>
             </section>
 
             <section>
-                <h4>My role</h4>
+                <h4>Meine Rolle</h4>
                 <p>
                     {html.escape(
                         project.get("role", project["subtitle"])
@@ -628,7 +627,7 @@ def project_dialog(project: dict) -> None:
                 </p>
 
                 <h4 class="case-tools-heading">
-                    Tools & technologies
+                    Tools & Technologien
                 </h4>
 
                 <div class="case-chip-row">
@@ -648,7 +647,7 @@ def project_dialog(project: dict) -> None:
 
     if project.get("demo_url"):
         st.link_button(
-            "🚀 Open PlatePilot app",
+            "🚀 PlatePilot App öffnen",
             project["demo_url"],
             use_container_width=False,
         )
@@ -672,7 +671,7 @@ def project_dialog(project: dict) -> None:
 
     with footer_left:
         if st.button(
-            "← Previous project",
+            "← Vorheriges Projekt",
             key=f"previous_project_{project_key}",
             use_container_width=True,
         ):
@@ -692,7 +691,7 @@ def project_dialog(project: dict) -> None:
 
     with footer_right:
         if st.button(
-            "Next project →",
+            "Weiteres Projekt →",
             key=f"next_project_{project_key}",
             type="primary",
             use_container_width=True,
@@ -746,7 +745,7 @@ def project_card(project: dict) -> None:
         )
 
         if st.button(
-            "View case study →",
+            "Case Study ansehen →",
             key=f"open_project_{project['title']}",
             use_container_width=True,
         ):
@@ -777,11 +776,11 @@ st.html(
             <span>YANA PFALZGRAF</span>
         </a>
         <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Work</a>
+            <a href="#about">Über mich</a>
+            <a href="#projects">Meine Projekte</a>
             <a href="#skills">Expertise</a>
         </nav>
-        <a class="header-cta" href="#contact">Contact</a>
+        <a class="header-cta" href="#contact">Kontakt</a>
     </header>
     """
 )
@@ -795,18 +794,18 @@ with hero_text:
     st.html(
         """
         <section class="hero-copy">
-            <p class="eyebrow">HELLO, I’M YANA</p>
+            <p class="eyebrow">HALLO, ICH BIN YANA</p>
                 <span><h1>Digital Product Specialist</h1></span>
-                <h2> Product Strategy · Business Analysis · </br>Data-Informed Products</h2><br>
+                <h2> Produktstrategie · Business Analyse · Datenbasierte Produktentwicklung</h2><br>
             
             <p class="hero-lead">
-                I bring 10+ years of experience in digital product development, combining user needs, 
-                business requirements and technology.<br> Having acquired knowledge in Data Analytics, 
-                I bring a data-informed perspective to product discovery, decision-making and continuous improvement.
+                Ich bringe über 10 Jahre Erfahrung in der Entwicklung digitaler Produkte mit und verbinde Nutzerbedürfnisse, Geschäftsanforderungen und Technologie.
+                Durch meine Kenntnisse in Data Analytics ergänze ich die Produktentwicklung um eine datenbasierte Perspektive – von Product Discovery 
+                und Entscheidungsfindung bis hin zur kontinuierlichen Optimierung.
             </p>
             <div class="hero-actions">
-                <a class="button primary" href="#projects">View case studies →</a>
-                <a class="button secondary" href="#about">About me</a>
+                <a class="button primary" href="#projects">Case Studies →</a>
+                <a class="button secondary" href="#about">Über mich</a>
             </div>
         </section>
         """
@@ -819,7 +818,7 @@ with hero_visual:
             <img
                 src="data:image/jpeg;base64,{portrait_base64}"
                 class="portrait-image"
-                alt="Portrait of Yana Pfalzgraf"
+                alt="Porträt von Yana Pfalzgraf"
             >
         </div>
         """
@@ -828,7 +827,7 @@ with hero_visual:
 # Kompetenzkarten und End-to-End-Prozess mit lokalen Lucide-SVGs
 st.html(
     f"""
-    <section class="expertise-section" aria-label="Experience and design approach">
+    <section class="expertise-section" aria-label="Erfahrung und Arbeitsweise">
         <div class="expertise-cards">
             <article class="expertise-card">
                 <div class="expertise-icon" aria-hidden="true">
@@ -836,8 +835,8 @@ st.html(
                 </div>
                 <div class="expertise-card-copy">
                     <p class="expertise-number">10+</p>
-                    <h3>Years in Digital Products</h3>
-                    <p>Experience across UX, digital product development, enterprise software and complex B2B products: from discovery to delivery.</p>
+                    <h3>Jahre Erfahrung mit digitalen Produkten</h3>
+                    <p>Erfahrung in UX, digitaler Produktentwicklung, Enterprise Software und komplexen B2B-Produkten – von der Discovery bis zur Umsetzung.</p>
                 </div>
             </article>
 
@@ -846,9 +845,9 @@ st.html(
                     <img src="{workflow_icon}" alt="">
                 </div>
                 <div class="expertise-card-copy">
-                    <p class="expertise-kicker">PRODUCT & BUSINESS</p>
-                    <h3>From requirements to product clarity</h3>
-                    <p>I structure complex requirements, connect user and business needs, shape product concepts and collaborate closely with stakeholders and engineering through delivery.
+                    <p class="expertise-kicker">PRODUKT & BUSINESS</p>
+                    <h3>Von Anforderungen zur Produktlösung</h3>
+                    <p>Ich strukturiere komplexe Anforderungen, verbinde Nutzer- und Geschäftsbedürfnisse, entwickle daraus Produktkonzepte und arbeite während der Umsetzung eng mit Stakeholdern und Entwicklungsteams zusammen.</p>
             </article>
 
             <article class="expertise-card">
@@ -856,22 +855,22 @@ st.html(
                     <img src="{chart_icon}" alt="">
                 </div>
                 <div class="expertise-card-copy">
-                    <p class="expertise-kicker">DATA-INFORMED DECISIONS</p>
-                    <h3>User needs. Business goals. Evidence.</h3>
-                    <p>My Data Analytics know-how helps me frame product questions, explore evidence and support product decisions with data and clear visualizations.</p>
+                    <p class="expertise-kicker">DATENBASIERTE ENTSCHEIDUNGEN</p>
+                    <h3>Nutzer. Business. Daten.</h3>
+                    <p>Meine Kenntnisse in Data Analytics helfen mir, Produktfragen klar zu formulieren, Daten und Zusammenhänge zu analysieren und Produktentscheidungen mit fundierten Erkenntnissen und verständlichen Visualisierungen zu unterstützen.</p>
                 </div>
             </article>
         </div>
 
         <div class="process-panel">
-            <p class="process-eyebrow">MY APPROACH: PRODUCT · BUSINESS · DATA</p>
+            <p class="process-eyebrow">MEIN ANSATZ: PRODUKT · BUSINESS · DATEN</p>
             <div class="process-flow">
                 <div class="process-step">
                     <div class="process-icon" aria-hidden="true">
                         <img src="{users_icon}" alt="">
                     </div>
-                    <h4>Discover</h4>
-                    <p>Understand user needs, stakeholder perspectives and business goals</p>
+                    <h4>Verstehen</h4>
+                    <p>Nutzerbedürfnisse, Stakeholder-Perspektiven und Geschäftsziele verstehen.</p>
                 </div>
 
                 <span class="process-arrow" aria-hidden="true">→</span>
@@ -880,8 +879,8 @@ st.html(
                     <div class="process-icon" aria-hidden="true">
                         <img src="{search_icon}" alt="">
                     </div>
-                    <h4>Analyze</h4>
-                    <p>Structure requirements, workflows, constraints and available data</p>
+                    <h4>Analysieren</h4>
+                    <p>Anforderungen, Prozesse, Rahmenbedingungen und verfügbare Daten strukturieren.</p>
                 </div>
 
                 <span class="process-arrow" aria-hidden="true">→</span>
@@ -890,8 +889,8 @@ st.html(
                     <div class="process-icon" aria-hidden="true">
                         <img src="{lightbulb_icon}" alt="">
                     </div>
-                    <h4>Shape</h4>
-                    <p>Translate insights into product concepts, priorities and actionable requirements</p>
+                    <h4>Gestalten</h4>
+                    <p>Erkenntnisse in Produktkonzepte, Prioritäten und konkrete Anforderungen übersetzen.</p>
                 </div>
 
                 <span class="process-arrow" aria-hidden="true">→</span>
@@ -900,8 +899,8 @@ st.html(
                     <div class="process-icon" aria-hidden="true">
                         <img src="{target_icon}" alt="">
                     </div>
-                    <h4>Validate</h4>
-                    <p>Test assumptions with users, stakeholders and data</p>
+                    <h4>Validieren</h4>
+                    <p>Annahmen mit Nutzern, Stakeholdern und Daten überprüfen.</p>
                 </div>
 
                 <span class="process-arrow" aria-hidden="true">→</span>
@@ -910,8 +909,8 @@ st.html(
                     <div class="process-icon" aria-hidden="true">
                         <img src="{growth_icon}" alt="">
                     </div>
-                    <h4>Deliver & evolve</h4>
-                    <p>Collaborate with engineering and use feedback and data to improve the product</p>
+                    <h4>Umsetzen & weiterentwickeln</h4>
+                    <p>Produkte gemeinsam umsetzen und datenbasiert verbessern.</p>
                 </div>
             </div>
         </div>
@@ -934,25 +933,25 @@ about_col, skills_col = st.columns(
 )
 
 with about_col:
-    section_header("PROFILE", "About me")
+    section_header("PROFIL", "Über mich")
     st.markdown(
         """
-I work at the intersection of **Product, Business, Technology and Data.**<br>
-With **10+ years** of experience in digital product development, I have worked across complex B2B, industrial, automotive and enterprise software environments: translating user and business needs into structured requirements and digital product solutions.<br><br>
-My background in **UX and product design** gives me a strong understanding of users, workflows and product discovery. I have worked closely with stakeholders, product owners and engineering teams throughout the product development process: from requirements and concepts to validation and delivery.<br><br>
-Through my professional development in **Data Science & Analytics**, I have expanded my profile with SQL, Python, Power BI, data modelling and analytics, enabling a more data-informed approach to product decisions and continuous improvement.
-Today, my focus is on Digital Product, Product Ownership and Business Analysis, particularly in data- and AI-informed product environments.
+Ich arbeite an der **Schnittstelle von Produkt, Business, Technologie und Daten.**<br>
+Mit über **10 Jahren Erfahrung** in der digitalen Produktentwicklung habe ich in komplexen B2B-, Industrie-, Automotive- und Enterprise-Software-Umgebungen gearbeitet. Dabei übersetze ich Nutzer- und Geschäftsbedürfnisse in strukturierte Anforderungen und digitale Produktlösungen.<br>
+Mein Hintergrund in **UX und Product Design** gibt mir ein tiefes Verständnis für Nutzer, Prozesse und Product Discovery. Im gesamten Produktentwicklungsprozess arbeite ich eng mit Stakeholdern, Product Ownern und Entwicklungsteams zusammen – von Anforderungen und Konzepten bis hin zu Validierung und Umsetzung.<br>
+Durch meine Weiterbildung in Data Science & Analytics habe ich mein Profil um SQL, Python, Power BI, Datenmodellierung und Analytics erweitert.<br> Dadurch kann ich Produktentscheidungen stärker datenbasiert treffen und kontinuierliche Verbesserungen unterstützen. 
+Mein heutiger Fokus liegt auf Digital Product, Product Ownership und Business Analyse – insbesondere in daten- und KI-gestützten Produktumgebungen.
         """, unsafe_allow_html=True
     )
 
 with skills_col:
-    section_header("EXPERTISE", "Core competencies")
+    section_header("EXPERTISE", "Kernkompetenzen")
     skills = [
-        "Digital Product Development", "Business Analysis", "Requirements Analysis", "Stakeholder Management",
-        "Product Discovery", "Product Ownership", "Agile Product Development",
+        "Digitale Produktentwicklung", "Business Analyse", "Anforderungsanalyse", "Stakeholder Management",
+        "Product Discovery", "Product Ownership", "Agile Produktentwicklung",
         "Cross-functional Collaboration", "User & Customer Insights",
-        "Product Analytics", "Data-Informed Decision Making", "KPI Thinking", "UX & Interaction Design", "Prototyping & Validation",
-        "Independent Ownership", "Data Visualization", "Product Design Thinking",
+        "Product Analytics", "Datenbasierte Entscheidungsfindung", "KPI Thinking", "UX & Interaction Design", "Prototyping & Validierung",
+        "Eigenverantwortliches Arbeiten", "Datenvisualisierung", "Product Design Thinking",
         "Python", "SQL",
     ]
     st.html(
@@ -964,9 +963,9 @@ with skills_col:
 # Projects
 st.html('<span id="projects" class="anchor"></span>')
 section_header(
-    "SELECTED WORK",
-    "Case studies",
-    "A selection of product design work across enterprise software, automotive experiences and data-informed digital products.",
+    "AUSGEWÄHLTE PROJEKTE",
+    "Case Studies",
+    "Eine Auswahl meiner Arbeiten aus Product Design, Enterprise Software, Automotive und datenbasierten digitalen Produkten.",
 )
 
 # Product Design / UX/UI first
@@ -992,7 +991,7 @@ with st.container(key="ux_project_carousel"):
             "←",
             key="ux_carousel_previous",
             disabled=ux_start == 0,
-            help="Previous projects",
+            help="Vorherige Projekte",
             use_container_width=True,
         ):
             st.session_state["ux_carousel_start"] = max(0, ux_start - 1)
@@ -1010,7 +1009,7 @@ with st.container(key="ux_project_carousel"):
             "→",
             key="ux_carousel_next",
             disabled=ux_start >= UX_MAX_START,
-            help="More projects",
+            help="Weitere Projekte",
             use_container_width=True,
         ):
             st.session_state["ux_carousel_start"] = min(
@@ -1027,12 +1026,12 @@ with st.container(key="ux_project_carousel"):
             for index in range(UX_MAX_START + 1)
         )
         st.html(
-            f'<div class="carousel-dots" aria-label="Carousel position">{dots}</div>'
+            f'<div class="carousel-dots" aria-label="Karussellposition">{dots}</div>'
         )
 
 
 # Data-informed work second
-st.html('<div class="project-category data"><span>DATA-INFORMED PRODUCT CASES</span></div>')
+st.html('<div class="project-category data"><span>DATENBASIERTE PRODUKT-CASE-STUDIES</span></div>')
 
 # Exactly three data projects in a static grid.
 data_cols = st.columns(3, gap="medium")
@@ -1069,19 +1068,19 @@ with st.container(key="contact_banner"):
         st.html(
             """
             <div class="contact-banner-copy">
-                <p class="eyebrow">CONTACT</p>
-                <h2>Let’s build impactful digital products.</h2>
+                <p class="eyebrow">KONTAKT</p>
+                <h2>Gemeinsam digitale Produkte mit Wirkung gestalten.</h2>
                 <p>
-                   I’m open to opportunities in Digital Product, Product Ownership and Business Analysis, particularly where product, technology and data come together.
+                   Ich bin offen für neue Möglichkeiten in den Bereichen Digital Product, Product Ownership und Business Analyse – insbesondere dort, wo Produkt, Technologie und Daten zusammenkommen.
                 </p>
             </div>
             """
         )
 
     with contact_action:
-        st.caption("→ Opens the contact form.")
+        st.caption("→ Öffnet das Formular.")
         st.button(
-            "Get in touch →",
+            "Kontakt aufnehmen →",
             key="open_portfolio_chat_button",
             type="primary",
             use_container_width=True,
@@ -1112,8 +1111,8 @@ footer_html = """
     <div class="footer-intro">
         <strong>YANA PFALZGRAF</strong>
         <p>
-            Digital Product Specialist · Product Ownership · Business Analysis
-            Connecting user needs, business goals, technology and data.</br>
+            Digital Product Specialist · Product Ownership · Business Analyse
+            Ich verbinde Nutzerbedürfnisse, Geschäftsziele, Technologie und Daten.</br>
 
         </p>
     </div>
@@ -1136,7 +1135,7 @@ footer_html = """
     </div>
 
     <div class="footer-contact">
-        <strong>CONTACT</strong>
+        <strong>KONTAKT</strong>
         <p>
             Yana Pfalzgraf </br>
             Falkenstrasse 37</br>
