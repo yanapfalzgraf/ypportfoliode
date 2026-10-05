@@ -118,6 +118,23 @@ body {
     gap: 80px;
 }
 
+.hero h2 {
+    color: #1f6b57; 
+}
+
+.hero h3 {
+    font-size: clamp(4rem, 5.8vw, 6rem);
+    line-height: 0.95;
+}
+
+.hero-secondary {
+    display: block;
+    margin-top: 0.35em;
+    font-size: 0.68em;
+    line-height: 1.02;
+    color: #1f6b57;
+}
+
 
 /* ------------------------------
    HERO LEFT
