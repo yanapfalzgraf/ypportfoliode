@@ -1,5 +1,5 @@
 const STREAMLIT_URL =
-    "https://yana-pfalzgraf-portfolio-eng.streamlit.app/";
+    "https://yana-pfalzgraf-portfolio-de.streamlit.app/";
 
 let isLeaving = false;
 
@@ -19,20 +19,25 @@ The portfolio link works independently of this.
 
 function warmUpStreamlit() {
 
+    // Verhindert, dass das iframe mehrfach erzeugt wird
+    if (document.getElementById("streamlit-preloader")) {
+        return;
+    }
+
     const iframe = document.createElement("iframe");
 
+    iframe.id = "streamlit-preloader";
     iframe.src = STREAMLIT_URL;
+
     iframe.setAttribute("aria-hidden", "true");
     iframe.setAttribute("tabindex", "-1");
 
-    iframe.style.position = "fixed";
+    iframe.style.position = "absolute";
     iframe.style.width = "1px";
     iframe.style.height = "1px";
     iframe.style.opacity = "0";
     iframe.style.pointerEvents = "none";
     iframe.style.border = "0";
-    iframe.style.left = "-9999px";
-    iframe.style.top = "-9999px";
 
     document.body.appendChild(iframe);
 }
@@ -135,14 +140,6 @@ window.addEventListener(
 START
 ------------------------------------------------
 */
-
-window.addEventListener("load", () => {
-
-    /*
-        Give the landing page priority and then
-        contact Streamlit shortly afterwards.
-    */
-
-    setTimeout(warmUpStreamlit, 500);
-
+document.addEventListener("DOMContentLoaded", () => {
+    warmUpStreamlit();
 });
